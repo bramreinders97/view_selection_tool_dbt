@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: elementary_src
+    database: '{{ var("elementary_src_db") }}'
+    schema: '{{ var("src_schema") }}'
+    tables:
+      - name: data_monitoring_metrics
+        columns:
+          - name: id
+          - name: metric_name
+          - name: metric_value
+
+      - name: dbt_invocations
+        columns:
+          - name: invocation_id
+          - name: selected
+
+      - name: dbt_models
+        columns:
+          - name: unique_id
+          - name: alias
+          - name: database_name
+          - name: schema_name
+          - name: package_name
+
+      - name: dbt_run_results
+        columns:
+          - name: unique_id
+          - name: invocation_id
+          - name: rows_affected
+          - name: materialization

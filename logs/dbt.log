@@ -102,3 +102,17 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m11:21:03.232003 [debug] [MainThread]: Connection 'debug' was properly closed.
 [0m11:21:03.232003 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192D8A83B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192D8A918D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000192D1BBEF90>]}
 [0m11:21:03.233003 [debug] [MainThread]: Flushing usage events
+[0m09:54:09.843092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D85459650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D854590D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D85458E90>]}
+
+
+============================== 09:54:09.850092 | b898c604-f340-4ba1-ae52-c96518b25ad1 ==============================
+[0m09:54:09.850092 [info ] [MainThread]: Running with dbt=1.7.5
+[0m09:54:09.852093 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\bramr\\.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt docs generate --select view_selection_tool', 'send_anonymous_usage_stats': 'True'}
+[0m09:54:09.854094 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\bramr\OneDrive\Documenten\Blenddata\Initiële uitwerkingen opdrachten\DBT\Code\The Tool\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:54:09.857097 [debug] [MainThread]: Command `dbt docs generate` failed at 09:54:09.856100 after 0.03 seconds
+[0m09:54:09.858097 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D8545B010>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D85459910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022D8545AFD0>]}
+[0m09:54:09.860099 [debug] [MainThread]: Flushing usage events
