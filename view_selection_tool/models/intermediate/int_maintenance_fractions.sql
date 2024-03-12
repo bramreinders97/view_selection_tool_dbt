@@ -23,12 +23,12 @@ maintenenace_fractions AS (
         CASE
             WHEN row_counts.row_count = 0 THEN NULL
             ELSE row_affected.rows_affected / row_counts.row_count
-        END as maintenance_fraction
+        END AS maintenance_fraction
 
-    FROM rows_affected_per_run row_affected
-    JOIN row_counts_per_model row_counts
-    ON row_affected.monitoring_id = row_counts.monitoring_id
+    FROM rows_affected_per_run AS row_affected
+    INNER JOIN row_counts_per_model AS row_counts
+        ON row_affected.monitoring_id = row_counts.monitoring_id
 
 )
 
-    SELECT * FROM maintenenace_fractions
+SELECT * FROM maintenenace_fractions

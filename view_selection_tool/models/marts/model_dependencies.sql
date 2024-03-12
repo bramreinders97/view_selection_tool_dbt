@@ -18,4 +18,4 @@ model_dependencies AS (
 
 )
 
-    SELECT * FROM model_dependencies
+SELECT * FROM model_dependencies
