@@ -24,4 +24,4 @@ relevant_models_only AS (
 
 )
 
-    SELECT * FROM relevant_models_only
+SELECT * FROM relevant_models_only

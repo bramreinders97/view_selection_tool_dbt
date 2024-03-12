@@ -22,4 +22,4 @@ relevant_package_only AS (
 
 )
 
-    SELECT * FROM relevant_package_only
+SELECT * FROM relevant_package_only

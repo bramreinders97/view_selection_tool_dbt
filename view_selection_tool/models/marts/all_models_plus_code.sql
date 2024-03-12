@@ -10,7 +10,7 @@ most_recent_compiled_code_per_model AS (
 
     SELECT
         model_id,
-        MAX(compile_completed_at) as latest_compiled_at
+        MAX(compile_completed_at) AS latest_compiled_at
 
     FROM including_other_cols
 
@@ -24,10 +24,11 @@ only_model_ids_plus_most_recent_code AS (
         i.model_id,
         i.compiled_code
 
-    FROM including_other_cols i
-    JOIN most_recent_compiled_code_per_model m ON i.model_id = m.model_id
-    AND i.compile_completed_at = m.latest_compiled_at
+    FROM including_other_cols AS i
+    INNER JOIN most_recent_compiled_code_per_model AS m ON
+        i.model_id = m.model_id
+        AND i.compile_completed_at = m.latest_compiled_at
 
 )
 
-    SELECT * FROM only_model_ids_plus_most_recent_code
+SELECT * FROM only_model_ids_plus_most_recent_code

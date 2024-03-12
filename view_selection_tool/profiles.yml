@@ -1,0 +1,16 @@
+# Dummy profiles.yml in order to give sqlfluff the chance to do its business,
+# Will not show up in GitHub, in order to keep the specifying of profiles
+# consistent for users compared to the elementary package
+view_selection_tool:
+  outputs:
+    local:
+      type: "postgres"
+      threads: 8
+      host: "postgres"
+      port: 5432
+      user: "{{ env_var('DBT_USER') }}"
+      password: "{{ env_var('DBT_ENV_SECRET_PASSWORD') }}"
+      dbname: "bram-vst"
+      schema: "transformed_view_selection_tool"
+
+  target: local

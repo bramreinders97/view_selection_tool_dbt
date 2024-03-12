@@ -11,7 +11,19 @@ including_monitoring_id AS (
     SELECT
         model_id,
         invocation_id,
-        {{ dbt.concat(["invocation_id", "'.'", "'\"'", "database_name", "'\".\"'", "schema_name", "'\".\"'", "alias", "'\"'"]) }}
+        {{
+            dbt.concat([
+                "invocation_id",
+                "'.'",
+                "'\"'",
+                "database_name",
+                "'\".\"'",
+                "schema_name",
+                "'\".\"'",
+                "alias",
+                "'\"'"
+            ])
+        }}
         AS monitoring_id,
         rows_affected,
         materialization
@@ -19,4 +31,4 @@ including_monitoring_id AS (
     FROM without_monitoring_id
 )
 
-    SELECT * FROM including_monitoring_id
+SELECT * FROM including_monitoring_id

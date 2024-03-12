@@ -9,7 +9,7 @@ original AS (
 useful_cols_only AS (
 
     SELECT
-        unique_id as model_id,
+        unique_id AS model_id,
         alias,
         database_name,
         schema_name,

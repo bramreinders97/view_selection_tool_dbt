@@ -13,7 +13,7 @@ id_and_row_count AS (
         metric_value AS row_count
 
     FROM original
-    WHERE metric_name='row_count'
+    WHERE metric_name = 'row_count'
 
 )
 
