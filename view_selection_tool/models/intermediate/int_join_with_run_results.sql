@@ -25,7 +25,8 @@ joined AS (
         r.rows_affected,
         r.materialization,
         r.compiled_code,
-        r.compile_completed_at
+        r.compile_completed_at,
+        r.execution_time
 
     FROM relevant_package_only AS p
     INNER JOIN dbt_run_results AS r

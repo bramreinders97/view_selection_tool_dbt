@@ -11,11 +11,6 @@ sources:
           - name: metric_name
           - name: metric_value
 
-      - name: dbt_invocations
-        columns:
-          - name: invocation_id
-          - name: selected
-
       - name: dbt_models
         columns:
           - name: unique_id

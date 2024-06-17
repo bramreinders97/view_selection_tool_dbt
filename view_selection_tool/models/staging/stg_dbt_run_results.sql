@@ -14,7 +14,8 @@ useful_cols_only AS (
         rows_affected,
         materialization,
         compiled_code,
-        compile_completed_at
+        compile_completed_at,
+        execution_time
 
     FROM original
     WHERE compiled_code IS NOT NULL
