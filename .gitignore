@@ -12,3 +12,4 @@ poetry.lock
 pyproject.toml
 target/
 dbt_packages/
+.user.yml
