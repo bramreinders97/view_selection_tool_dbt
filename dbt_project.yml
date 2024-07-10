@@ -48,7 +48,3 @@ vars:
     elementary_src_db: #Fill in the database where the elementary tables are
     src_schema: #Fill in the schema where the elementary tables are
     relevant_package: #Fill in the 'name' of your project as specified in dbt_project.yml of your project
-
-    #Optional vars
-    #Fill in the materialization types to check, default ('table', 'incremental', 'materialized_view')
-    relevant_materializations: ('table', 'incremental', 'materialized_view')
