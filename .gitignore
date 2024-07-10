@@ -1,3 +1,12 @@
+.nox/
 logs/
+.venv/
 .idea/
 __pycache__/
+
+# For User Perspective Repo
+CI/
+.gitlab-ci.yml
+noxfile.py
+poetry.lock
+pyproject.toml
