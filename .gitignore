@@ -10,3 +10,5 @@ CI/
 noxfile.py
 poetry.lock
 pyproject.toml
+target/
+dbt_packages/
