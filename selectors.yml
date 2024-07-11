@@ -1,9 +1,0 @@
-selectors:
-  - name: exclude_all
-    description: Exclude models by default. Only run when users asks for it specifically.
-    default: true
-    definition:
-      union:
-        - exclude:
-            - method: fqn
-              value: '*'
