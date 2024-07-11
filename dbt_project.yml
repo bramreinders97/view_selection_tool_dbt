@@ -44,3 +44,8 @@ vars:
     elementary_src_db: #Fill in the database where the elementary tables are
     src_schema: #Fill in the schema where the elementary tables are
     relevant_package: #Fill in the 'name' of your project as specified in dbt_project.yml of your project
+
+on-run-start:
+  - "{{ check_var('elementary_src_db') }}"
+  - "{{ check_var('src_schema') }}"
+  - "{{ check_var('relevant_package') }}"

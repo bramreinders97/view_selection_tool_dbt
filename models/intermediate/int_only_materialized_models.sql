@@ -20,7 +20,7 @@ relevant_models_only AS (
 
     FROM all_materializations
 
-    WHERE materialization IN {{ var("relevant_materializations") }}
+    WHERE materialization='table'
 
 )
 
