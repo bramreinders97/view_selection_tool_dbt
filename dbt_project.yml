@@ -37,10 +37,6 @@ models:
     marts:
       +materialized: table
 
-    # Only run the code from vst if the user explicitly asks for it
-    +enabled: false
-
-
 vars:
   view_selection_tool:
 
