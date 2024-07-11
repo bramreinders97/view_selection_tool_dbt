@@ -3,6 +3,6 @@ selectors:
     description: Exclude models by default. Only run when users asks for it specifically.
     default: true
     definition:
-      - method: fqn
-        value: '*'
-        exclude: true
+      - exclude:
+          - method: fqn
+            value: '*'
