@@ -10,16 +10,17 @@ own GitHub repository:
 We assume you have a working dbt project for which you want advice. If so, follow the following
 steps:
 
-1. Install the dbt package `elementary`, as described by 
-[their installation instructions](https://docs.elementary-data.com/cloud/onboarding/quickstart-dbt-package).
+1. Install the dbt package `Elementary`:  
+Follow the [installation instructions](https://docs.elementary-data.com/cloud/onboarding/quickstart-dbt-package)
+provided by `Elementary`.
 
 
-2. Do a `dbt run --select <your_project_name>`. Make sure that elementary's `on-run-end`
-hook has completed successfully. This fills the elementary tables with the info 
-`ViewSelectionAdvisor` needs to do its thing. 
+2. Do a `dbt run --select <your_project_name>`. Ensure that Elementary's `on-run-end`
+hook has completed successfully. This step populates the Elementary tables with the 
+necessary information for `ViewSelectionAdvisor`. 
 
 
-3. Install `ViewSelectionAdvisor` by adding the following to your `packages.yml` file:
+3. Include `ViewSelectionAdvisor` to your `packages.yml` file:
     ```yaml
       - git: "https://github.com/bramreinders97/view_selection_tool_dbt.git"
         revision: 6650cb7327d2ff2e3363b0cfddd233bcc6c4dbc6
