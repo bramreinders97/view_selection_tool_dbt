@@ -20,15 +20,20 @@ Note: `ViewSelectionAdvisor` assumes that all [destination nodes](## "Destinatio
 Note 2: By default, `ViewSelectionAdvisor` only looks at materialization configurations of at most 2 models. 
 This can be changed using the `max_materializations` variable (see [overview of variables](#possible-variables-for-vst-advise)).
 
+
+### A note on Elementary's defaults materializations warning
+Please note that when running any of the `dbt run` commands in the coming steps, it is possible that you observe
+a warning from dbt on elementary trying to override default materializations. 
+This is not a problem, as [the developers of Elementary are aware of this and working on a solution](https://docs.elementary-data.com/oss/quickstart/quickstart-cli-package#important-allowing-elementary-to-override-dbts-default-materializations-relevant-from-dbt-1-8).
+Furthermore, the parts of the elementary package that are affected by this are not relevant for `ViewSelectionAdvisor`.
+
 ## Installation Instructions
-We assume you have a working dbt project for which you want advice. If so, follow the following
-steps:
 
 ### dbt part
 1. Include `ViewSelectionAdvisor` in your `packages.yml` file:
     ```yaml
       - git: "https://github.com/bramreinders97/view_selection_tool_dbt.git"
-        revision: 6650cb7327d2ff2e3363b0cfddd233bcc6c4dbc6
+        revision: _see github link for current revision_
     ``` 
  
 2. Update your `dbt_project.yml` file:
@@ -75,11 +80,11 @@ steps:
 
 4. Install the package using your preferred method:
    ```shell
-   pip install view_selection_tool
+   pip install view-selection-python
    ```
    or
    ```shell
-   poetry add view_selection_tool
+   poetry add view-selection-python
    ```
 
 
