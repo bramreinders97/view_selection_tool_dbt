@@ -1,4 +1,4 @@
-## ViewSelectionAdvisor
+# ViewSelectionAdvisor
 
 Welcome to `ViewSelectionAdvisor`, a tool designed to help dbt users address the problem of model materialization. 
 This tool consists of two separate packages, each hosted in its own GitHub repository:
@@ -6,7 +6,6 @@ This tool consists of two separate packages, each hosted in its own GitHub repos
 This package is dependent on another dbt package: [Elementary](https://docs.elementary-data.com/guides/modules-overview/dbt-package)
 * [A python package](https://github.com/bramreinders97/view_selection_tool_python)
 
-## Package Explanation
 ### What does it do?
 Most dbt projects are structured with a DAG that includes staging, intermediate, and marts models. Typically, staging and intermediate models are stored as views, while marts models are stored as tables. However, this default configuration may not always be the most efficient from a performance perspective. Determining which models should be materialized and which should not can be challenging.
 This is where `ViewSelectionAdvisor` comes in to help. By using this tool, you are advised on the best 
@@ -18,11 +17,13 @@ materialization strategy for you models in dbt.
 
 Note: `ViewSelectionAdvisor` assumes that all [destination nodes](## "Destination nodes are nodes in your DAG without an outgoing edge. In most cases, these nodes correspond to mart tables.") are already materialized as tables. Consequently, these nodes will not appear in the provided advice.
 
+Note 2: By default, `ViewSelectionAdvisor` only looks at materialization configurations of at most 2 models. 
+This can be changed using the `max_materializations` variable (see [overview of variables](#possible-variables-for-vst-advise)).
 
 ## Installation Instructions
 We assume you have a working dbt project for which you want advice. If so, follow the following
 steps:
- 
+
 ### dbt part
 1. Include `ViewSelectionAdvisor` in your `packages.yml` file:
     ```yaml
