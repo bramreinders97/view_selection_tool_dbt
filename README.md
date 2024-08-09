@@ -33,7 +33,7 @@ Furthermore, the parts of the elementary package that are affected by this are n
 1. Include `ViewSelectionAdvisor` in your `packages.yml` file:
     ```yaml
       - git: "https://github.com/bramreinders97/view_selection_tool_dbt.git"
-        revision: _see github link for current revision_
+        revision: 7a6d08f923c50d8930fcbdc0dca1ab23bc934520
     ``` 
  
 2. Update your `dbt_project.yml` file:
